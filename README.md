@@ -3,13 +3,13 @@
 Obtiene data de la [API de Rick and Morty](https://rickandmortyapi.com/) y resuelve los siguientes desafios
 
 1. Char counter
-- - Cuantas veces aparece la letra 'i' case insensitive en los nombres de todas las **location**
-- - Cuantas veces aparece la letra 'e' case insensitive en los nombres de todas las **episode**
-- - Cuantas veces aparece la letra 'c' case insensitive en los nombres de todas las **character**
+   - Cuantas veces aparece la letra 'i' case insensitive en los nombres de todas las **location**
+   - Cuantas veces aparece la letra 'e' case insensitive en los nombres de todas las **episode**
+   - Cuantas veces aparece la letra 'c' case insensitive en los nombres de todas las **character**
 2. Episode locations
-- - Para cada episode, indicar la cantidad y un listado con las **location** (**origin**) de todos los **character** que aparecieron es ese **episode** (sin repetir)
+   - Para cada episode, indicar la cantidad y un listado con las **location** (**origin**) de todos los **character** que aparecieron es ese **episode** (sin repetir)
 3. Metrics
-- - Cuanto tiempo tardo en correr cada programa en total (desde ejecución hasta entrega de resultados)
+   - Cuanto tiempo tardo en correr cada programa en total (desde ejecución hasta entrega de resultados)
 
 ## Dependence free
 
