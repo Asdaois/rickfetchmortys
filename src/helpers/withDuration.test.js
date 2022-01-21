@@ -2,7 +2,7 @@ const withDuration = require('./withDuration');
 
 test('duration is greater than 3 seconds', async () => {
   const callback = async () => {
-    await new Promise((r) => setTimeout(r, 3500));
+    await new Promise((r) => setTimeout(r, 3510));
   };
   const result = await withDuration(callback);
 

@@ -1,5 +1,5 @@
 /**
- *  Get a function that return a object and add the execution time 
+ *  add the execution time of a function that returns an object
  *  @param {() => ({})} callback
  */
 const withDuration = async (callback) => {

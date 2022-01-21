@@ -1,12 +1,10 @@
+/*
+ * Do a regex to get the number of char in a words
+ * @param{string} word
+ */
 const countChar = (char, word) => {
   const regex = new RegExp(char, 'gi');
-  let counter = 0;
-
-  while (regex.exec(word) !== null) {
-    counter += 1;
-  }
-
-  return counter;
+  return word.match(regex)?.length ?? 0;
 };
 
 module.exports = countChar;
