@@ -9,7 +9,7 @@ const EpisodeLocations = async () => {
 
     episode.characters.forEach((characterUrl) => {
       const characterSchema = allCharacters[extractIndexFromUrl(characterUrl)];
-      if (characterSchema?.origin) { locations.add(characterSchema.origin.name); }
+      locations.add(characterSchema.origin.name);
     });
 
     return { name: episode.name, episode: episode.episode, locations: Array.from(locations) };
