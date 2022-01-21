@@ -10,7 +10,7 @@ const extractIndexFromUrl = (url) => {
   const result = url.match(regex);
 
   if (!result) return null;
-  return Number(result[0]);
+  return Number(result[0]) - 1;
 };
 
 module.exports = { extractIndexFromUrl };
