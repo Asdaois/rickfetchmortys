@@ -17,7 +17,9 @@ const generateResult = ({ resource, char, data }) => {
   return { char, count: charCounter, resource };
 };
 
-const CharCounter = ([locations, characters, episodes]) => async () => {
+const CharCounter = async () => {
+  const [locations, characters, episodes] = await getData();
+
   const locationResult = generateResult({ char: 'l', data: locations, resource: 'location' });
 
   const episodesResult = generateResult({ char: 'e', data: episodes, resource: 'episode' });
@@ -25,7 +27,7 @@ const CharCounter = ([locations, characters, episodes]) => async () => {
   const charactersResult = generateResult({ char: 'c', data: characters, resource: 'character' });
 
   return {
-    exercise_name: 'Char counter',
+    exerciseName: 'Char counter',
     results: [locationResult, episodesResult, charactersResult],
   };
 };

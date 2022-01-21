@@ -1,11 +1,18 @@
+const fs = require('fs');
 const CharCounter = require('./exercises/CharCounter');
-const getData = require('./getData');
+const EpisodeLocations = require('./exercises/EpisodeLocations');
 const withDuration = require('./helpers/withDuration');
 
-const resolveCharCounter = async () => {
-  const data = await getData();
-  const result = await withDuration(CharCounter(data));
-  console.log(result);
-};
+const app = async () => {
+  const results = [];
 
-resolveCharCounter();
+  let result = await withDuration(CharCounter);
+  results.push(result);
+
+  result = await withDuration(EpisodeLocations);
+  results.push(result);
+
+  const resultsJson = JSON.stringify(results);
+  fs.writeFileSync('results.json', resultsJson);
+};
+app();
