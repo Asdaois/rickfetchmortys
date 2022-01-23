@@ -3,16 +3,15 @@
  *  @param {() => ({})} callback
  */
 const withDuration = async (callback) => {
-  const startTime = Date.now();
+  const startTime = process.hrtime();
 
   const result = await callback();
 
-  const duration = Date.now() - startTime;
+  const duration = process.hrtime(startTime);
 
-  const seconds = Math.floor(duration / 1000);
-  const miliSeconds = duration - seconds * 1000;
-  const time = `${seconds}s ${miliSeconds}ms`;
-  const inTime = seconds < 3;
+  const miliSeconds = duration[1] / 10000000;
+  const time = `${duration[0]}s ${miliSeconds.toFixed(6)}ms`;
+  const inTime = duration[0] < 3;
 
   if (process.env.NODE_ENV !== 'test') {
     const { exerciseName, results } = result;

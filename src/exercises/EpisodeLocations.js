@@ -2,7 +2,7 @@ const getData = require('../getData');
 const { extractIndexFromUrl } = require('../helpers/extractIndexFromUrl');
 
 const EpisodeLocations = async () => {
-  const [allLocations, allCharacters, episodes] = await getData();
+  const [, allCharacters, episodes] = await getData();
 
   const results = episodes.map((episode) => {
     const locations = new Set();
